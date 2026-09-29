@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilgelife Akademi – Hamide Aycan Topçuer</title>
+  <meta name="description" content="Bilgelife Akademi – Kişisel Gelişim & Danışmanlık">
+  <style>
+    :root {
+      --plum: #6d2a86;
+      --plum-deep: #4a1b5e;
+      --lilac: #efe6f4;
+      --paper: #fdfbfe;
+      --ink: #2a1f30;
+      --muted: #6a5d72;
+      --line: #dccbe6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.2; }
+    a { color: var(--plum); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--plum); outline-offset: 3px; border-radius: 4px; }
+
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* Kopfzeile */
+    header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 18px; padding-bottom: 18px; }
+    header nav { display: flex; gap: 22px; font-size: 0.95rem; }
+    header nav a { text-decoration: none; color: var(--ink); }
+    header nav a:hover { color: var(--plum); }
+    .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+    .lang button {
+      background: none; border: 0; padding: 6px 14px; cursor: pointer;
+      font: inherit; font-size: 0.85rem; color: var(--muted);
+    }
+    .lang button[aria-pressed="true"] { background: var(--plum); color: #fff; }
+
+    /* Hero */
+    .hero { background: var(--lilac); border-bottom: 1px solid var(--line); }
+    .hero .wrap { padding-top: 56px; padding-bottom: 64px; text-align: center; }
+    .hero img {
+      width: min(100%, 560px); height: auto; display: block; margin: 0 auto 36px;
+      border-radius: 6px; box-shadow: 0 10px 30px rgba(74, 27, 94, 0.18);
+    }
+    .hero h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); color: var(--plum-deep); }
+    .hero p.role { margin-top: 10px; font-size: 1.15rem; color: var(--muted); }
+    .btn {
+      display: inline-block; margin-top: 28px; padding: 13px 28px;
+      background: var(--plum); color: #fff; text-decoration: none;
+      border-radius: 999px; font-weight: 600;
+    }
+    .btn:hover { background: var(--plum-deep); }
+
+    /* Abschnitte */
+    section { padding: 64px 0; }
+    section + section { border-top: 1px solid var(--line); }
+    h2 { font-size: 1.7rem; color: var(--plum-deep); margin-bottom: 20px; }
+    .text { max-width: 62ch; }
+    .todo { color: var(--muted); font-style: italic; }
+
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; margin-top: 8px; }
+    .services h3 { font-size: 1.15rem; margin-bottom: 6px; color: var(--plum); }
+    .services div { border-left: 3px solid var(--plum); padding-left: 16px; }
+
+    dl { display: grid; grid-template-columns: max-content 1fr; gap: 10px 24px; }
+    dt { font-weight: 600; }
+
+    footer { background: var(--plum-deep); color: #e9dcef; padding: 28px 0; font-size: 0.9rem; }
+    footer a { color: #fff; }
+
+    @media (max-width: 620px) {
+      header nav { display: none; }
+      dl { grid-template-columns: 1fr; gap: 2px; }
+      dd { margin-bottom: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <nav aria-label="Menü">
+        <a href="#hakkinda" data-i18n="nav_about">Hakkında</a>
+        <a href="#hizmetler" data-i18n="nav_services">Hizmetler</a>
+        <a href="#iletisim" data-i18n="nav_contact">İletişim</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <img src="logo.png" alt="Bilgelife Akademi – Hamide Aycan Topçuer, Kişisel Gelişim &amp; Danışmanlık" width="594" height="336">
+        <h1>Hamide Aycan Topçuer</h1>
+        <p class="role" data-i18n="role">Kişisel Gelişim &amp; Danışmanlık</p>
+        <a class="btn" href="#iletisim" data-i18n="cta">İletişime geç</a>
+      </div>
+    </div>
+
+    <section id="hakkinda">
+      <div class="wrap">
+        <h2 data-i18n="about_h">Hakkında</h2>
+        <p class="text todo" data-i18n="about_p">[Buraya kısa bir tanıtım metni gelecek: kimlere, nasıl destek olduğu.]</p>
+      </div>
+    </section>
+
+    <section id="hizmetler">
+      <div class="wrap">
+        <h2 data-i18n="services_h">Hizmetler</h2>
+        <div class="services">
+          <div>
+            <h3 data-i18n="s1_h">[Hizmet 1]</h3>
+            <p class="todo" data-i18n="s_p">[Kısa açıklama]</p>
+          </div>
+          <div>
+            <h3 data-i18n="s2_h">[Hizmet 2]</h3>
+            <p class="todo" data-i18n="s_p">[Kısa açıklama]</p>
+          </div>
+          <div>
+            <h3 data-i18n="s3_h">[Hizmet 3]</h3>
+            <p class="todo" data-i18n="s_p">[Kısa açıklama]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="iletisim">
+      <div class="wrap">
+        <h2 data-i18n="contact_h">İletişim</h2>
+        <dl>
+          <dt data-i18n="c_address">Adres</dt>
+          <dd class="todo">[Adres, İlçe / Şehir]</dd>
+          <dt data-i18n="c_phone">Telefon / WhatsApp</dt>
+          <dd class="todo">[+90 ...]</dd>
+          <dt data-i18n="c_mail">E-posta</dt>
+          <dd class="todo">[ornek@bilgelifeakademi.com]</dd>
+          <dt data-i18n="c_web">Web</dt>
+          <dd><a href="https://www.bilgelifeakademi.com">www.bilgelifeakademi.com</a></dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Bilgelife Akademi · Hamide Aycan Topçuer</div>
+  </footer>
+
+  <script>
+    const T = {
+      tr: {
+        nav_about: "Hakkında", nav_services: "Hizmetler", nav_contact: "İletişim",
+        role: "Kişisel Gelişim & Danışmanlık", cta: "İletişime geç",
+        about_h: "Hakkında",
+        about_p: "[Buraya kısa bir tanıtım metni gelecek: kimlere, nasıl destek olduğu.]",
+        services_h: "Hizmetler",
+        s1_h: "[Hizmet 1]", s2_h: "[Hizmet 2]", s3_h: "[Hizmet 3]", s_p: "[Kısa açıklama]",
+        contact_h: "İletişim", c_address: "Adres", c_phone: "Telefon / WhatsApp", c_mail: "E-posta", c_web: "Web"
+      },
+      en: {
+        nav_about: "About", nav_services: "Services", nav_contact: "Contact",
+        role: "Personal Development & Counseling", cta: "Get in touch",
+        about_h: "About",
+        about_p: "[A short introduction goes here: who she supports and how.]",
+        services_h: "Services",
+        s1_h: "[Service 1]", s2_h: "[Service 2]", s3_h: "[Service 3]", s_p: "[Short description]",
+        contact_h: "Contact", c_address: "Address", c_phone: "Phone / WhatsApp", c_mail: "Email", c_web: "Web"
+      }
+    };
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.textContent = T[lang][el.dataset.i18n];
+      });
+      document.querySelectorAll(".lang button").forEach(b => {
+        b.setAttribute("aria-pressed", b.dataset.lang === lang);
+      });
+      try { localStorage.setItem("lang", lang); } catch (e) {}
+    }
+
+    document.querySelectorAll(".lang button").forEach(b =>
+      b.addEventListener("click", () => setLang(b.dataset.lang))
+    );
+
+    let saved = "tr";
+    try { saved = localStorage.getItem("lang") || "tr"; } catch (e) {}
+    setLang(saved);
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,2 +1,1 @@
 # Bilgelife
-# Bilgelife
