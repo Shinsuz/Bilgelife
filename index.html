@@ -64,9 +64,9 @@
     .text { max-width: 62ch; }
     .todo { color: var(--muted); font-style: italic; }
 
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; margin-top: 8px; }
-    .services h3 { font-size: 1.15rem; margin-bottom: 6px; color: var(--plum); }
-    .services div { border-left: 3px solid var(--plum); padding-left: 16px; }
+    .lead { max-width: 62ch; color: var(--muted); margin-bottom: 28px; }
+    .services { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px 28px; }
+    .services li { border-left: 3px solid var(--plum); padding: 4px 0 4px 16px; font-size: 1.05rem; }
 
     dl { display: grid; grid-template-columns: max-content 1fr; gap: 10px 24px; }
     dt { font-weight: 600; }
@@ -118,20 +118,19 @@
     <section id="hizmetler">
       <div class="wrap">
         <h2 data-i18n="services_h">Hizmetler</h2>
-        <div class="services">
-          <div>
-            <h3 data-i18n="s1_h">[Hizmet 1]</h3>
-            <p class="todo" data-i18n="s_p">[Kısa açıklama]</p>
-          </div>
-          <div>
-            <h3 data-i18n="s2_h">[Hizmet 2]</h3>
-            <p class="todo" data-i18n="s_p">[Kısa açıklama]</p>
-          </div>
-          <div>
-            <h3 data-i18n="s3_h">[Hizmet 3]</h3>
-            <p class="todo" data-i18n="s_p">[Kısa açıklama]</p>
-          </div>
-        </div>
+        <p class="lead" data-i18n="services_lead">Mentörlük / Danışmanlık ve eğitimler</p>
+        <ul class="services">
+          <li data-i18n="sv1">Aile danışmanlığı</li>
+          <li data-i18n="sv2">Homeopati</li>
+          <li data-i18n="sv3">Thetahealing</li>
+          <li data-i18n="sv4">Aromaterapi</li>
+          <li data-i18n="sv5">Aile dizimi</li>
+          <li data-i18n="sv6">Kadim nefes teknikleri</li>
+          <li data-i18n="sv7">Bach flowers</li>
+          <li data-i18n="sv8">Schüssler analizi</li>
+          <li data-i18n="sv9">EMDR</li>
+          <li data-i18n="sv10">Numeroloji</li>
+        </ul>
       </div>
     </section>
 
@@ -140,7 +139,9 @@
         <h2 data-i18n="contact_h">İletişim</h2>
         <dl>
           <dt data-i18n="c_address">Adres</dt>
-          <dd class="todo">[Adres, İlçe / Şehir]</dd>
+          <dd data-i18n="c_address_v">Serdivan, Sakarya, Türkiye <span class="todo">[+ Sokak / No]</span></dd>
+          <dt data-i18n="c_hours">Çalışma saatleri</dt>
+          <dd data-i18n="c_hours_v">Pazartesi – Pazar, 09:00 – 18:00</dd>
           <dt data-i18n="c_phone">Telefon / WhatsApp</dt>
           <dd class="todo">[+90 ...]</dd>
           <dt data-i18n="c_mail">E-posta</dt>
@@ -164,8 +165,11 @@
         about_h: "Hakkında",
         about_p: "[Buraya kısa bir tanıtım metni gelecek: kimlere, nasıl destek olduğu.]",
         services_h: "Hizmetler",
-        s1_h: "[Hizmet 1]", s2_h: "[Hizmet 2]", s3_h: "[Hizmet 3]", s_p: "[Kısa açıklama]",
-        contact_h: "İletişim", c_address: "Adres", c_phone: "Telefon / WhatsApp", c_mail: "E-posta", c_web: "Web"
+        services_lead: "Mentörlük / Danışmanlık ve eğitimler",
+        sv1: "Aile danışmanlığı", sv2: "Homeopati", sv3: "Thetahealing", sv4: "Aromaterapi", sv5: "Aile dizimi",
+        sv6: "Kadim nefes teknikleri", sv7: "Bach flowers", sv8: "Schüssler analizi", sv9: "EMDR", sv10: "Numeroloji",
+        contact_h: "İletişim", c_address: "Adres", c_address_v: "Serdivan, Sakarya, Türkiye",
+        c_hours: "Çalışma saatleri", c_hours_v: "Pazartesi – Pazar, 09:00 – 18:00", c_phone: "Telefon / WhatsApp", c_mail: "E-posta", c_web: "Web"
       },
       en: {
         nav_about: "About", nav_services: "Services", nav_contact: "Contact",
@@ -173,8 +177,11 @@
         about_h: "About",
         about_p: "[A short introduction goes here: who she supports and how.]",
         services_h: "Services",
-        s1_h: "[Service 1]", s2_h: "[Service 2]", s3_h: "[Service 3]", s_p: "[Short description]",
-        contact_h: "Contact", c_address: "Address", c_phone: "Phone / WhatsApp", c_mail: "Email", c_web: "Web"
+        services_lead: "Mentoring / counseling and training",
+        sv1: "Family counseling", sv2: "Homeopathy", sv3: "ThetaHealing", sv4: "Aromatherapy", sv5: "Family constellation",
+        sv6: "Ancient breathing techniques", sv7: "Bach flowers", sv8: "Schüssler analysis", sv9: "EMDR", sv10: "Numerology",
+        contact_h: "Contact", c_address: "Address", c_address_v: "Serdivan, Sakarya, Türkiye",
+        c_hours: "Opening hours", c_hours_v: "Monday – Sunday, 09:00 – 18:00", c_phone: "Phone / WhatsApp", c_mail: "Email", c_web: "Web"
       }
     };
 
