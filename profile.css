@@ -1,0 +1,80 @@
+* {box-sizing:border-box;margin:0;padding:0;}
+html {scroll-behavior:smooth;scroll-padding-top:130px;}
+body {font:16px/1.65 'Segoe UI',system-ui,sans-serif;background:var(--paper);color:var(--ink);}
+a {color:var(--link);}
+button,input,select {font:inherit;}
+h1,h2,h3 {font-family:Georgia,serif;font-weight:400;line-height:1.15;color:var(--head);}
+h1 {font-size:clamp(38px,5vw,62px);letter-spacing:-1.6px;margin-bottom:24px;}
+.wrap {max-width:1200px;margin:auto;padding:0 40px;}
+header {position:sticky;top:0;z-index:20;background:var(--header-bg);border-bottom:1px solid var(--line);}
+header nav {display:flex;font-size:13px;} header nav a {text-decoration:none;}
+.tools {display:flex;gap:12px;align-items:center;}
+.lang {display:flex;border:1px solid var(--line);border-radius:30px;overflow:hidden;background:var(--card);}
+.lang button {border:0;padding:7px 12px;background:transparent;color:var(--muted);cursor:pointer;font-size:12px;}
+.lang button[aria-pressed="true"] {background:var(--plum);color:#f5ecdf;}
+.profile-theme {min-width:44px;min-height:44px;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--link);cursor:pointer;}
+section {padding:72px 0;}
+.eyebrow {display:block;font:600 11px system-ui;letter-spacing:2px;color:var(--link);margin-bottom:22px;}
+.text-link {color:var(--link);}
+.btn {display:inline-block;background:var(--plum);color:#f5ecdf;border:0;border-radius:8px;padding:14px 24px;text-decoration:none;font:600 14px system-ui;}
+.skip {position:absolute;top:-80px;left:16px;z-index:30;padding:12px;background:var(--plum);color:#f5ecdf;}.skip:focus {top:12px;}
+:focus-visible {outline:2px solid var(--plum-soft);outline-offset:4px;}
+.profile-page .approach-strip[hidden] {display:none;}
+.profile-page .personal-copy .qualification-shortcut {display:none;}
+footer {background:var(--tint);border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;}
+@media(max-width:760px) {.wrap {padding-inline:20px;}section {padding-block:40px;}h1 {font-size:39px;}.profile-page {padding-bottom:0;}.profile-page header nav {justify-content:center;}}
+
+/* Page-specific layout, after the shared theme and components. */
+.profile-page header .wrap {align-items:center;}
+.profile-page header nav {align-items:center;}
+.profile-page header nav a {display:inline-flex;align-items:center;min-height:44px;}
+.profile-page #hakkinda {padding-top:56px;}
+.profile-page .personal-layout {grid-template-columns:280px minmax(0,1fr);gap:64px;align-items:center;max-width:1000px;margin:auto;}
+.profile-page .identity-card {max-width:260px;padding:30px 24px 25px;border-radius:110px 110px 18px 18px;}
+.profile-page .identity-orbit {width:100px;height:100px;margin-bottom:20px;}
+.profile-page .identity-orbit span {font-size:40px;}
+.profile-page .identity-name {font-size:27px;}
+.profile-page .identity-role {margin:14px 0 20px;}
+.profile-page .personal-copy h1 {font-size:clamp(38px,4.4vw,56px);line-height:1.08;margin-bottom:22px;}
+.profile-page .personal-copy>p {max-width:53ch;font-size:16px;line-height:1.85;}
+.profile-page .personal-copy .text-link {margin-top:24px;}
+.profile-page .personal-background {margin:48px auto 0;max-width:1000px;padding:28px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid var(--line);}
+.profile-page .personal-background h3 {grid-column:1 / -1;font-size:26px;margin-bottom:6px;}
+.profile-page .personal-background details {border:1px solid var(--line);border-radius:12px;padding:0;background:var(--tint);align-self:start;}
+.profile-page .personal-background summary {padding:18px;font-size:14px;line-height:1.7;cursor:pointer;}
+.profile-page .personal-background details p {padding:0 18px 20px;margin:0;font-size:14px;line-height:1.8;}
+.profile-page .qualification-section {max-width:1000px;margin:42px auto 0;padding-top:36px;}
+.profile-page .qualification-heading {grid-template-columns:1fr;gap:14px;}
+.profile-page .qualification-heading h2 {font-size:34px;}
+.profile-page .qualification-heading>p {max-width:75ch;}
+.profile-page .qualification-pending {margin:18px 0 24px;font-size:13px;}
+.profile-page .qualification-cards {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start;}
+.profile-page .qualification-card {padding:0;overflow:hidden;border-radius:12px;}
+.qualification-card summary {display:flex;align-items:center;gap:16px;min-height:100px;padding:20px;list-style:none;cursor:pointer;}
+.qualification-card summary::-webkit-details-marker {display:none;}
+.qualification-summary-copy {flex:1;min-width:0;}
+.qualification-summary-copy strong {display:block;font:22px/1.25 Georgia,serif;color:var(--head);}
+.qualification-summary-note {display:block;font:12px/1.7 system-ui;color:var(--muted);margin-top:7px;}
+.qualification-expand {flex-shrink:0;display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;font:20px Georgia,serif;color:var(--link);}
+.qualification-card[open] .qualification-expand {transform:rotate(45deg);}
+.qualification-body {padding:0 22px 22px;border-top:1px solid var(--line);}
+.profile-page .qualification-body dl {display:grid;grid-template-columns:1fr 1fr;column-gap:16px;}
+.profile-page .qualification-body dl dt {grid-column:1;font-size:12px;}
+.profile-page .qualification-body dl dd {grid-column:2;font-size:13px;align-self:end;}
+.profile-page .qualification-footer {margin-top:24px;}
+@media(max-width:760px) {
+ .profile-page header nav {grid-column:1 / -1;grid-row:2;justify-content:center;}
+ .profile-page .personal-layout {grid-template-columns:1fr;gap:30px;}
+ .profile-page .identity-card {max-width:220px;padding:25px 20px;}
+ .profile-page .identity-orbit {width:80px;height:80px;}
+ .profile-page .identity-name {font-size:25px;}
+ .profile-page .personal-copy h1 {font-size:40px;}
+ .profile-page .personal-background {grid-template-columns:1fr;margin-top:32px;}
+ .profile-page .qualification-cards {grid-template-columns:1fr;}
+ .qualification-card summary {min-height:94px;padding:18px;gap:12px;}
+ .qualification-summary-copy strong {font-size:21px;}
+ .profile-page .qualification-body dl {grid-template-columns:1fr;}
+ .profile-page .qualification-body dl dt,.profile-page .qualification-body dl dd {grid-column:1;}
+ .profile-page .qualification-body dl dd {font-size:16px;}
+ .profile-page #hakkinda {padding-top:32px;}
+}

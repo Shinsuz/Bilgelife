@@ -1,0 +1,14 @@
+@view-transition {navigation:auto;}
+::view-transition-old(root) {animation:page-out .16s ease-out both;}
+::view-transition-new(root) {animation:page-in .28s ease-out both;}
+@keyframes page-out {to {opacity:0;}}
+@keyframes page-in {from {opacity:0;}to {opacity:1;}}
+.profile-page main {animation:profile-enter .4s ease-out both;}
+@keyframes profile-enter {from {opacity:0;translate:0 10px;}to {opacity:1;translate:0 0;}}
+.qualification-expand {transition:transform .22s ease,background-color .22s ease;}
+.qualification-card summary:hover .qualification-expand {background:var(--tint);}
+.profile-page {transition:background-color .3s ease,color .3s ease;}
+@media(prefers-reduced-motion:reduce) {
+ ::view-transition-old(root),::view-transition-new(root),.profile-page main {animation:none;}
+ .qualification-expand,.profile-page {transition:none;}
+}
